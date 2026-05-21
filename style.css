@@ -364,3 +364,206 @@ footer { background-color: var(--text-color); color: var(--gray-light); padding:
     .org-level { padding-top: 20px; }
     .org-node { width: 100%; max-width: 250px; margin: 0 auto; }
 }
+
+/* --- 추가 스타일 시작 (index.html에서 이동됨) --- */
+/* 추가 CSS - 히어로 섹션 배경 대칭 수정 */
+.hero {
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    overflow: hidden !important;
+}
+.hero-content {
+    width: 100%;
+}
+.hero .wave-container {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+}
+.hero .wave-container svg {
+    transform: none !important;
+    width: 100%;
+}
+
+/* 추가 CSS - 캠페인 영상 섹션 */
+.campaign-video-section {
+    padding: 60px 0;
+    background: transparent !important;
+    text-align: center;
+}
+.campaign-video-section .section-title {
+    color: #4ecdc4 !important;
+    text-shadow: 0 2px 12px rgba(78,205,196,0.25);
+    margin-bottom: 30px;
+}
+.video-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.video-inner {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #1a9ea0;
+    background-color: #000;
+}
+.video-inner video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    cursor: pointer;
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.video-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.video-overlay .play-button {
+    width: 64px;
+    height: 64px;
+    background-color: #1a9ea0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    padding-left: 5px;
+}
+
+/* 추가 CSS - 카드뉴스 슬라이더 섹션 */
+.card-news-section {
+    padding: 60px 0;
+    background: transparent !important;
+    text-align: center;
+}
+.card-news-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    color: #4ecdc4 !important;
+    text-shadow: 0 2px 12px rgba(78,205,196,0.25);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    padding: 0 20px;
+    word-break: keep-all;
+}
+.card-news-title .highlight {
+    color: #ffffff;
+}
+.slider-wrapper {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media (min-width: 480px) {
+    .slider-wrapper {
+        padding: 0;
+    }
+}
+.slider-counter {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    z-index: 10;
+}
+@media (min-width: 480px) {
+    .slider-counter {
+        right: 10px;
+    }
+}
+#slideWrapper {
+    overflow: hidden;
+    width: min(480px, 90vw);
+    margin: 0 auto;
+    min-height: 300px; /* CSS 높이 붕괴 방지용 최소 높이 */
+}
+.slide-item {
+    width: 14.2857%;
+    flex-shrink: 0;
+    display: block; /* flex로 인한 이미지 너비/높이 붕괴 방지 */
+}
+.slide-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    display: block;
+    border-radius: 16px;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: opacity 0.3s;
+}
+.slider-btn.prev-btn {
+    left: 30px;
+}
+.slider-btn.next-btn {
+    right: 30px;
+}
+@media (min-width: 480px) {
+    .slider-btn.prev-btn { left: 10px; }
+    .slider-btn.next-btn { right: 10px; }
+}
+.slider-btn.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+.slider-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.slider-dots .dot.active {
+    background-color: #1a9ea0;
+}
