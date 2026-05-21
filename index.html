@@ -1,4 +1,4 @@
-인덱<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -215,49 +215,7 @@
             background-color: #1a9ea0;
         }
 
-        /* 플로팅 퀵 메뉴 */
-        .quick-menu {
-            position: fixed;
-            right: 20px;
-            bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 9999;
-        }
-        .quick-btn {
-            background-color: #1a9ea0;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        .quick-btn:hover {
-            background-color: #4ecdc4;
-            transform: translateY(-3px);
-            color: #fff;
-        }
-        .quick-btn i {
-            font-size: 1.2rem;
-        }
-        @media (max-width: 768px) {
-            .quick-menu {
-                right: 15px;
-                bottom: 20px;
-            }
-            .quick-btn {
-                padding: 10px 16px;
-                font-size: 0.85rem;
-            }
-        }
+
     </style>
 </head>
 <body>
@@ -313,7 +271,12 @@
 
         <!-- Campaign Video Section -->
         <section class="campaign-video-section">
-            <h2 class="section-title">비에이텍 광고영상</h2>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; padding: 0 20px;">
+                <h2 class="section-title" style="margin-bottom: 0;">비에이텍 광고영상</h2>
+                <a href="브로슈어 제작.png" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 16px; border-radius: 30px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-file-image"></i> 기업 홍보 브로슈어 보기
+                </a>
+            </div>
             <!-- 영상 파일 위치: 프로젝트루트/video/campaign.mp4 -->
             <!-- 파일명이 다를 경우 아래 src 경로만 수정하세요   -->
             <div style="position:relative; max-width:720px; margin:0 auto;">
@@ -348,25 +311,25 @@
                 <div id="slideWrapper">
                     <div id="slideTrack" style="display:flex; transition:transform 0.4s ease-in-out; width: 700%;">
                         <div class="slide-item">
-                          <img src="카드뉴스1.png" alt="카드뉴스 1">
+                          <img src="카드뉴스/카드뉴스1.png" alt="카드뉴스 1">
                         </div>
                         <div class="slide-item">
-                          <img src="카드뉴스_2.png" alt="카드뉴스 2">
+                          <img src="카드뉴스/카드뉴스_2.png" alt="카드뉴스 2">
                         </div>
                         <div class="slide-item">
-                          <img src="카드뉴스_3.png" alt="카드뉴스 3">
+                          <img src="카드뉴스/카드뉴스_3.png" alt="카드뉴스 3">
                         </div>
                         <div class="slide-item">
-                          <img src="카드뉴스_4.png" alt="카드뉴스 4">
+                          <img src="카드뉴스/카드뉴스_4.png" alt="카드뉴스 4">
                         </div>
                         <div class="slide-item">
-                          <img src="카드뉴스_5.png" alt="카드뉴스 5">
+                          <img src="카드뉴스/카드뉴스_5.png" alt="카드뉴스 5">
                         </div>
                         <div class="slide-item">
-                          <img src="카드뉴스_6.png" alt="카드뉴스 6">
+                          <img src="카드뉴스/카드뉴스_6.png" alt="카드뉴스 6">
                         </div>
                         <div class="slide-item">
-                          <img src="카드뉴스_7.png" alt="카드뉴스 7">
+                          <img src="카드뉴스/카드뉴스_7.png" alt="카드뉴스 7">
                         </div>
                     </div>
                 </div>
@@ -512,18 +475,6 @@
             <a href="inquiry.html" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">온라인 문의하기</a>
         </section>
     </main>
-
-    <!-- Floating Quick Menu -->
-    <div class="quick-menu">
-        <a href="브로슈어 제작.png" target="_blank" class="quick-btn" title="기업 홍보 브로슈어 보기">
-            <i class="fas fa-file-image"></i>
-            <span>기업 홍보 브로슈어 보기</span>
-        </a>
-        <a href="조직도 및 업무분장 PDF.pdf" target="_blank" class="quick-btn" title="조직도 및 업무분장 보기">
-            <i class="fas fa-file-pdf"></i>
-            <span>조직도 및 업무분장 보기</span>
-        </a>
-    </div>
 
     <!-- Footer -->
     <footer>
